@@ -29,6 +29,7 @@ $(document).ready(function() {
     function startGame() {
         // Looping thru the length of the questions, add a new question into a new div, loop thru all of
         // the possible answers in the answer array, add a new radio button
+        $('.js-stop').css('visibility', 'visible');
         for (var i = 0; i < questions.length; i++) {
             $('.js-questions').append('<p>' + questions[i].question + '</p>');
                 for (var j = 0; j < questions[i].answer.length; j++) {
