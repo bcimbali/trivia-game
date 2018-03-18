@@ -1,36 +1,34 @@
-// I just want to show 2 questions and record corrects, incorrects and unanswered.
-
 $(document).ready(function() {
 
     // global variables
-
 
     // Question data
 
     let questions = [ 
         {
-            "question": "What is Marges maiden name?",
-            "answer": ["Smith", "Buvier", "Bubble", "Chip"],
-            "correctAnswer": "Buvier", 
+            "question": "According to various international studies, the worlds most popular color is...",
+            "answer": ["Red", "Blue", "Green", "White"],
+            "correctAnswer": "Blue", 
         },
         {
-            "question": "Where does Homer work?",
-            "answer": ["Library", "Power Plant", "McDonalds", "Sears"],
-            "correctAnswer": "Power Plant",  
+            "question": "Studies show that the first color a baby sees is...",
+            "answer": ["Red", "Blue", "Yellow", "Black"],
+            "correctAnswer": "Red",  
         },
         {
-            "question": "What instrument does Lisa play?",
-            "answer": ["Violin", "Oboe", "Cowbell", "Sax"],
-            "correctAnswer": "Sax",  
+            "question": "What color is most effective at suppressing anger and anxiety?",
+            "answer": ["Blue", "Green", "Brown", "Pink"],
+            "correctAnswer": "Pink",  
         }
-    ]
+    ];
 
     let userAnswers = [];
 
 
-    // functions
+    // Functions
     function startGame() {
-        // Populate questions div
+        // Looping thru the length of the questions, add a new question into a new div, loop thru all of
+        // the possible answers in the answer array, add a new radio button
         for (var i = 0; i < questions.length; i++) {
             $('.js-questions').append('<p>' + questions[i].question + '</p>');
                 for (var j = 0; j < questions[i].answer.length; j++) {
