@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'qbicle';
+    src: url('./../fonts/Qbicle1BRKMK.ttf') format('truetype');
+}
+
 .background-white {
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -18,7 +23,7 @@
 
 .button {
     padding: 1%;
-    width: 10%;
+    width: 20%;
 }
 
 .center {
@@ -59,13 +64,21 @@
 }
 
 .header {
-    color: green;
-    font-size: xx-large;
+    color: purple;
+    /* font-size: xx-large; */
     height: 10vh;
+}
+
+.header-font {
+    font-family: 'qbicle', arial;
 }
 
 .hidden {
     visibility: hidden;
+}
+
+.m-b {
+    margin-bottom: 2%;
 }
 
 .main-section-height {
@@ -80,6 +93,10 @@
     display: none;
 }
 
+.p-b {
+    padding-bottom: 2%;
+}
+
 .pad-2-10 {
     padding: 2% 10%;
 }
@@ -88,12 +105,24 @@
     padding: 3% 0;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .row-wrap {
     flex-flow: row wrap;
 }
 
 .text-center {
     text-align: center;
+}
+
+.text-large {
+    font-size: 4rem;
+}
+
+.text-medium {
+    font-size: 2rem;
 }
 
 .w-100 {
