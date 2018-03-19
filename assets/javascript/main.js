@@ -71,10 +71,8 @@ $(document).ready(function() {
     function decrement() {
         //  Decrease time by one.
         time--;
-  
         //  Show the number in the js-countdown span tag.
         $('.js-countdown').text(time + ' seconds');
-  
         //  Once number hits zero...
         if (time === 0) {
             //  ...Stop the game.

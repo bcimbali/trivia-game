@@ -1,21 +1,101 @@
+.background-white {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.body {
+    /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5),rgba(255, 165, 0, 0.5),rgba(255, 255, 0, 0.5),rgba(0, 128, 0, 0.5),blue,indigo,violet) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    height: 100vh;
+    
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.button {
+    padding: 1%;
+    width: 10%;
+}
+
+.center {
+    justify-content: center;
+}
+
+.colorful {
+	background:
+		-webkit-linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+		-webkit-linear-gradient(315deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+		-webkit-linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+		-webkit-linear-gradient(135deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+	background:
+		linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+		linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+		linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+        linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+}
+
+.column {
+    flex-direction: column;
+}
 
 .container {
     border: 1px solid black;
+}
+
+.cross-axis-center {
+    align-items: center;
 }
 
 .d-f {
     display: flex;
 }
 
+.flex-start {
+    justify-content: flex-start;
+}
+
 .header {
     color: green;
     font-size: xx-large;
+    height: 10vh;
 }
 
 .hidden {
     visibility: hidden;
 }
 
+.main-section-height {
+    height: 100vh;
+}
+
+.middle {
+    vertical-align: middle;
+}
+
 .none {
     display: none;
+}
+
+.pad-2-10 {
+    padding: 2% 10%;
+}
+
+.pad-main-section {
+    padding: 3% 0;
+}
+
+.row-wrap {
+    flex-flow: row wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-100 {
+    width: 100%;
 }
