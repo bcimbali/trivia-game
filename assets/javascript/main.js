@@ -1,9 +1,8 @@
 $(document).ready(function() {
 
-    // global variables
+    // Global Variables //////////////////////////////////////////////////////////////////////
 
-    // Question data
-
+    // Question data:
     let questions = [ 
         {
             "question": "According to various international studies, the worlds most popular color is...",
@@ -28,19 +27,35 @@ $(document).ready(function() {
     let answersUnanswered = 0;
 
 
-    // Functions
+    // Functions ////////////////////////////////////////////////////////////////////////////
+
+    // Displays the totals at the end of the game
+
+    function populateQuestions() {
+        
+    }
 
     function showTotals() {
+        $('<div>All Done!</div>').appendTo('.js-main-section');
         $('<div>Correct Answers: ' + answersGuessedCorrect + '</div>').appendTo('.js-main-section');
         $('<div>Incorrect Answers: ' + answersGuessedIncorrect + '</div>').appendTo('.js-main-section');
         $('<div>Unanswered: ' + answersUnanswered + '</div>').appendTo('.js-main-section');
     }
 
+    function showStopButton() {
+        $('.js-stop').show();
+    }
+
+    function hideStartButton() {
+        $('.js-start').hide();
+    }
+
+    // Starts the game
     function startGame() {
         // Hide the start button
-        $('.js-start').css('visibility', 'hidden');
+        hideStartButton();
         // Make the stop button visible
-        $('.js-stop').show();
+        showStopButton();
         // Looping thru the length of the questions, add a new question into a new div, loop thru all of
         // the possible answers in the answer array, add a new radio button
         for (var i = 0; i < questions.length; i++) {
@@ -54,6 +69,7 @@ $(document).ready(function() {
         }
     }
 
+    // Stops the game
     function stopGame() {
 
         $('input:checked').each(function() {
@@ -89,7 +105,7 @@ $(document).ready(function() {
 
 
 
-    // events
+    // Events ////////////////////////////////////////////////////////////////
 
         // On page load, show click to start button.
 
@@ -114,7 +130,7 @@ $(document).ready(function() {
         // User clicks done button, and it submits the answers and evaluates questions right, questions wrong, and unanswered. Displays them on a page.
 
 
-        // If timer runs out, the form is submited and evaluates questions right, wron and unanswered. Displays them on a page.
+        // If timer runs out, the form is submited and evaluates questions right, wrong and unanswered. Displays them on a page.
 
 
 
