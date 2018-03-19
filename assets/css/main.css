@@ -1,5 +1,15 @@
+
+.container {
+    border: 1px solid black;
+}
+
+.d-f {
+    display: flex;
+}
+
 .header {
     color: green;
+    font-size: xx-large;
 }
 
 .hidden {

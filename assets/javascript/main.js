@@ -149,10 +149,9 @@ $(document).ready(function() {
                     answersGuessedIncorrect++;
                     // console.log('Answers Incorrect: ' + answersGuessedIncorrect);
                 }                
-            $('.js-main-section').children().hide();
-            // console.log($(this).val());
         }); 
 
+        $('.js-main-section').children().hide();
         let totalAnswersAttempted = answersGuessedCorrect + answersGuessedIncorrect;
         answersUnanswered = questions.length - totalAnswersAttempted;
         displayTotals();
