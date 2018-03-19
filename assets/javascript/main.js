@@ -21,15 +21,16 @@ $(document).ready(function() {
         }
     ];
 
-    let userAnswers = [];
+
     let answersGuessedCorrect = 0;
     let answersGuessedIncorrect = 0;
     let answersUnanswered = 0;
+    let intervalId;
+    let time = 30;
+    let userAnswers = [];
 
 
     // Functions ////////////////////////////////////////////////////////////////////////////
-
-    // Displays the totals at the end of the game
 
     // Function looping thru the length of the questions, add a new question into a new div, loop thru all of
     // the possible answers in the answer array, add a new radio button
@@ -43,6 +44,27 @@ $(document).ready(function() {
         }
     }
 
+    function decrement() {
+
+        //  Decrease time by one.
+        time--;
+  
+        //  Show the number in the js-countdown span tag.
+        $('.js-countdown').text(time + ' seconds');
+  
+  
+        //  Once number hits zero...
+        if (time === 0) {
+  
+            //  ...Stop the game.
+            stopGame();
+            $(this).css('visibility', 'hidden');
+            displayTotals();
+  
+        }
+      }
+
+    // Displays the totals at the end of the game
     function displayTotals() {
         $('<div>All Done!</div>').appendTo('.js-main-section');
         $('<div>Correct Answers: ' + answersGuessedCorrect + '</div>').appendTo('.js-main-section');
@@ -50,19 +72,30 @@ $(document).ready(function() {
         $('<div>Unanswered: ' + answersUnanswered + '</div>').appendTo('.js-main-section');
     }
 
+    function hideStartButton() {
+        $('.js-start').hide();
+    }
+
     function showStopButton() {
         $('.js-stop').show();
     }
 
-    function hideStartButton() {
-        $('.js-start').hide();
+    function showTimer() {
+        $('.js-timer').show();
+    }
+
+    function runClock() {
+        clearInterval(intervalId);
+        intervalId = setInterval(decrement, 1000);
     }
 
     // Starts the game
     function startGame() {
         hideStartButton();
-        showStopButton();
         populateQuestions();
+        runClock();
+        showStopButton();
+        showTimer();
     }
 
     // Stops the game
@@ -111,18 +144,3 @@ $(document).ready(function() {
         // If timer runs out, the form is submited and evaluates questions right, wrong and unanswered. Displays them on a page.
 
 });
-
-
-
-
-// $.each($('input[name="a0"]:checked')), function() {
-        //     $(this);
-        // }
-        // for (var i; i < questions.length; i++) {
-        //     for (var b; b < questions[i].answer.length; b++) {
-        //        if ($('input[name=a' + i + ']:checked')) {
-
-        //             console.log('')
-        //         }
-        //     }
-        // }
