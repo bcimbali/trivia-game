@@ -32,6 +32,34 @@ $(document).ready(function() {
 
     // Functions ////////////////////////////////////////////////////////////////////////////
 
+    // Function to decrease the countdown
+    function decrement() {
+        //  Decrease time by one.
+        time--;
+  
+        //  Show the number in the js-countdown span tag.
+        $('.js-countdown').text(time + ' seconds');
+  
+        //  Once number hits zero...
+        if (time === 0) {
+            //  ...Stop the game.
+            stopGame();
+        }
+      }
+
+    // Displays the totals at the end of the game
+    function displayTotals() {
+        $('<div>All Done!</div>').appendTo('.js-main-section');
+        $('<div>Correct Answers: ' + answersGuessedCorrect + '</div>').appendTo('.js-main-section');
+        $('<div>Incorrect Answers: ' + answersGuessedIncorrect + '</div>').appendTo('.js-main-section');
+        $('<div>Unanswered: ' + answersUnanswered + '</div>').appendTo('.js-main-section');
+    }
+
+    // Hides the start button
+    function hideStartButton() {
+        $('.js-start').hide();
+    }
+
     // Function looping thru the length of the questions, add a new question into a new div, loop thru all of
     // the possible answers in the answer array, add a new radio button
     function populateQuestions() {
@@ -44,49 +72,20 @@ $(document).ready(function() {
         }
     }
 
-    function decrement() {
-
-        //  Decrease time by one.
-        time--;
-  
-        //  Show the number in the js-countdown span tag.
-        $('.js-countdown').text(time + ' seconds');
-  
-  
-        //  Once number hits zero...
-        if (time === 0) {
-  
-            //  ...Stop the game.
-            stopGame();
-            $(this).css('visibility', 'hidden');
-            displayTotals();
-  
-        }
-      }
-
-    // Displays the totals at the end of the game
-    function displayTotals() {
-        $('<div>All Done!</div>').appendTo('.js-main-section');
-        $('<div>Correct Answers: ' + answersGuessedCorrect + '</div>').appendTo('.js-main-section');
-        $('<div>Incorrect Answers: ' + answersGuessedIncorrect + '</div>').appendTo('.js-main-section');
-        $('<div>Unanswered: ' + answersUnanswered + '</div>').appendTo('.js-main-section');
+    // Runs the countdown clock
+    function runClock() {
+        clearInterval(intervalId);
+        intervalId = setInterval(decrement, 1000);
     }
 
-    function hideStartButton() {
-        $('.js-start').hide();
-    }
-
+    // Shows the stop button
     function showStopButton() {
         $('.js-stop').show();
     }
 
+    // Displays the timer/countdown div
     function showTimer() {
         $('.js-timer').show();
-    }
-
-    function runClock() {
-        clearInterval(intervalId);
-        intervalId = setInterval(decrement, 1000);
     }
 
     // Starts the game
@@ -121,6 +120,7 @@ $(document).ready(function() {
 
         let totalAnswersAttempted = answersGuessedCorrect + answersGuessedIncorrect;
         answersUnanswered = questions.length - totalAnswersAttempted;
+        displayTotals();
     }
 
 
@@ -138,9 +138,6 @@ $(document).ready(function() {
         $('.js-stop').on('click', function() {
             stopGame();
             $(this).css('visibility', 'hidden');
-            displayTotals();
         });
-
-        // If timer runs out, the form is submited and evaluates questions right, wrong and unanswered. Displays them on a page.
 
 });
