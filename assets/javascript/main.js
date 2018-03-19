@@ -23,13 +23,26 @@ $(document).ready(function() {
     ];
 
     let userAnswers = [];
+    let answersGuessedCorrect = 0;
+    let answersGuessedIncorrect = 0;
+    let answersUnanswered = 0;
 
 
     // Functions
+
+    function showTotals() {
+        $('<div>Correct Answers: ' + answersGuessedCorrect + '</div>').appendTo('.js-main-section');
+        $('<div>Incorrect Answers: ' + answersGuessedIncorrect + '</div>').appendTo('.js-main-section');
+        $('<div>Unanswered: ' + answersUnanswered + '</div>').appendTo('.js-main-section');
+    }
+
     function startGame() {
+        // Hide the start button
+        $('.js-start').css('visibility', 'hidden');
+        // Make the stop button visible
+        $('.js-stop').show();
         // Looping thru the length of the questions, add a new question into a new div, loop thru all of
         // the possible answers in the answer array, add a new radio button
-        $('.js-stop').css('visibility', 'visible');
         for (var i = 0; i < questions.length; i++) {
             $('.js-questions').append('<p>' + questions[i].question + '</p>');
                 for (var j = 0; j < questions[i].answer.length; j++) {
@@ -47,12 +60,16 @@ $(document).ready(function() {
             // if value = correct quesiton answer add 1 to score
             let answerChecked = $(this).val();
                 if (answerChecked === questions[$(this).attr('name')].correctAnswer) {
-                    console.log('woohoo');
+                    console.log('correct');
+                    answersGuessedCorrect++;
+                    console.log('Answers Corect: ' + answersGuessedCorrect);
                 }
                 else {
-                    console.log('doh');
+                    console.log('wrong');
+                    answersGuessedIncorrect++;
+                    console.log('Answers Incorrect: ' + answersGuessedIncorrect);
                 }
-            
+        $('.js-main-section').children().hide();
             // console.log($(this).val());
         });
 
@@ -86,6 +103,8 @@ $(document).ready(function() {
         $('.js-stop').on('click', function() {
             // execute instructions
             stopGame();
+            $(this).css('visibility', 'hidden');
+            showTotals();
         });
 
         // Between 5-10 questions load on the page and each question has 4 radio buttons.

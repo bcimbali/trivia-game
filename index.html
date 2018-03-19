@@ -9,18 +9,21 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <title>Color Trivia</title>
 </head>
-<body>
-    <h1>Color trivia</h1>
-    <!-- Start game on button click -->
-    <button class="js-start">Start</button>
+<body class="body">
+    <div class="container">
+        <h1 class="header">Color trivia</h1>
+        <!-- Start game on button click -->
+        <div class="js-main-section">
+            <button class="button js-start">Start</button>
 
-    <!-- Questions get rendered here -->
-    <div class="js-questions"></div>
-    <div class="js-answers"></div>
-
-    <!-- Stop the game -->
-    <button class="js-stop hidden">Stop the game</button>
-
+            <!-- Questions get rendered here -->
+            <div class="js-questions"></div>
+            <div class="js-answers"></div>
+        
+            <!-- Stop the game -->
+            <button class="button none js-stop">Stop the game</button>
+        </div>
+    </div>
 
     <script src="./assets/javascript/main.js"></script>
 </body>

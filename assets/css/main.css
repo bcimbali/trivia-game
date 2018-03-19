@@ -1,3 +1,11 @@
+.header {
+    color: green;
+}
+
 .hidden {
     visibility: hidden;
+}
+
+.none {
+    display: none;
 }
