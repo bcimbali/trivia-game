@@ -18,7 +18,42 @@ $(document).ready(function() {
             "question": "What color is most effective at suppressing anger and anxiety?",
             "answer": ["Blue", "Green", "Brown", "Pink"],
             "correctAnswer": "Pink",  
-        }
+        },
+        {
+            "question": "Which color most frequently makes people dizzy?",
+            "answer": ["Yellow", "Orange", "Pink", "White"],
+            "correctAnswer": "Yellow", 
+        },
+        {
+            "question": "Which color makes you appear powerful?",
+            "answer": ["Brown", "Blue", "Black", "Red"],
+            "correctAnswer": "Black", 
+        },
+        {
+            "question": "For sports team jerseys, which color increases the winning chances?",
+            "answer": ["White", "Yellow", "Black", "Red"],
+            "correctAnswer": "Red", 
+        },
+        {
+            "question": "Based on several studies, the safest car color is...?",
+            "answer": ["White", "Gray", "Black", "Orange"],
+            "correctAnswer": "White", 
+        },
+        {
+            "question": "Which color is hypothesized to impair performance on achievement tasks (like test taking)?",
+            "answer": ["Black", "Red", "Blue", "Orange"],
+            "correctAnswer": "Red", 
+        },
+        {
+            "question": "When you suddenly switch off the lights on your room, just before complete darkness takes over, you’ll see a dark gray color which experts call...?",
+            "answer": ["Glaucous", "Eigengru", "Wenge", "Xanadu"],
+            "correctAnswer": "Eigengru", 
+        },
+        {
+            "question": "It is easier to remember something if it is in...?",
+            "answer": ["Back&White", "Color"],
+            "correctAnswer": "Color", 
+        },
     ];
 
 
@@ -26,7 +61,7 @@ $(document).ready(function() {
     let answersGuessedIncorrect = 0;
     let answersUnanswered = 0;
     let intervalId;
-    let time = 30;
+    let time = 60;
     let userAnswers = [];
 
 
@@ -122,9 +157,6 @@ $(document).ready(function() {
         answersUnanswered = questions.length - totalAnswersAttempted;
         displayTotals();
     }
-
-
-
 
     // Events ////////////////////////////////////////////////////////////////
 
