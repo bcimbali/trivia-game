@@ -8,12 +8,12 @@
 }
 
 .body {
-    /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5),rgba(255, 165, 0, 0.5),rgba(255, 255, 0, 0.5),rgba(0, 128, 0, 0.5),blue,indigo,violet) no-repeat center center fixed; 
+    /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5),rgba(255, 165, 0, 0.5),rgba(255, 255, 0, 0.5),rgba(0, 128, 0, 0.5),blue,indigo,violet) no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; */
-    height: 100vh;
+    background-size: cover;
+    min-height: 100%;
     
 }
 
@@ -63,6 +63,10 @@
     justify-content: flex-start;
 }
 
+.fluid-header {
+    font-size: calc(28px + (46 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
 .header {
     color: purple;
     /* font-size: xx-large; */
@@ -77,8 +81,28 @@
     visibility: hidden;
 }
 
+.html {
+    height: 100%;
+}
+
+.m-0 {
+    min-height: 0;
+}
+
+.m-auto {
+    margin: auto;
+}
+
 .m-b {
     margin-bottom: 2%;
+}
+
+.m-h-10 {
+    min-height: 10%;
+}
+
+.m-h-100 {
+    min-height: 100%;
 }
 
 .main-section-height {
@@ -91,6 +115,10 @@
 
 .none {
     display: none;
+}
+
+.norm-font {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .p-b {
@@ -127,4 +155,17 @@
 
 .w-100 {
     width: 100%;
+}
+
+
+/* Meida Queries */
+
+@media screen and (max-width: 640px) {
+    .text-large {
+        /* font-size: 2rem; */
+    }
+
+    .text-medium {
+        font-size: 1.5rem;
+    } 
 }
