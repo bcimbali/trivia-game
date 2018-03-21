@@ -101,7 +101,7 @@ $(document).ready(function() {
                 for (var j = 0; j < questions[i].answer.length; j++) {
                     $('.js-questions').append('<input class="pointer" type="radio" value="' + questions[i].answer[j] + '"name="'+ i + '">' + questions[i].answer[j] + '</input>' );
                 }
-            $('.js-questions').append('<br><hr>');
+            $('.js-questions').append('<br><hr class="hr">');
         }
     }
 
