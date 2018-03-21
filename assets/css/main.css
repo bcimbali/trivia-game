@@ -7,6 +7,10 @@
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+.bg-purple {
+    background-color: purple;
+}
+
 .body {
     /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5),rgba(255, 165, 0, 0.5),rgba(255, 255, 0, 0.5),rgba(0, 128, 0, 0.5),blue,indigo,violet) no-repeat center center fixed;  */
     -webkit-background-size: cover;
@@ -17,13 +21,29 @@
     
 }
 
+.bold {
+    font-weight: bolder;
+}
+
 .border {
     border: 1px solid black;
 }
 
+.border-white {
+    border: 1px solid white;
+}
+
 .button {
-    padding: 1%;
+    padding: 2% 3%;
     width: 20%;
+}
+
+.button:focus {
+    outline:0;
+}
+
+.button:hover {
+    background-color: tomato;
 }
 
 .center {
@@ -137,6 +157,10 @@
     cursor: pointer;
 }
 
+.purple {
+    color: purple;
+}
+
 .row-wrap {
     flex-flow: row wrap;
 }
@@ -153,10 +177,17 @@
     font-size: 2rem;
 }
 
+.transparent {
+    background: transparent;
+}
+
 .w-100 {
     width: 100%;
 }
 
+.white-text {
+    color: white;
+}
 
 /* Meida Queries */
 
