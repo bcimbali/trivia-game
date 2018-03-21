@@ -72,7 +72,7 @@ $(document).ready(function() {
         //  Decrease time by one.
         time--;
         //  Show the number in the js-countdown span tag.
-        $('.js-countdown').text(time + ' seconds');
+        $('.js-countdown').text('00:' + time);
         //  Once number hits zero...
         if (time === 0) {
             //  ...Stop the game.

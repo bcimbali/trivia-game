@@ -3,6 +3,11 @@
     src: url('./../fonts/Qbicle1BRKMK.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'digital';
+    src: url('./../fonts/Digital_Dust.otf') format('opentype');
+}
+
 .background-white {
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -75,6 +80,10 @@
 
 .d-f {
     display: flex;
+}
+
+.digital {
+    font-family: 'digital', arial;
 }
 
 .flex-start {
