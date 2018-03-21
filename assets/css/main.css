@@ -91,7 +91,7 @@
 }
 
 .fluid-header {
-    font-size: calc(28px + (46 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(30px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .header {
@@ -181,7 +181,7 @@
 }
 
 .text-large {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .text-medium {
