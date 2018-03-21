@@ -12,13 +12,11 @@
 }
 
 .body {
-    /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5),rgba(255, 165, 0, 0.5),rgba(255, 255, 0, 0.5),rgba(0, 128, 0, 0.5),blue,indigo,violet) no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 100%;
-    
+    min-height: 100vh;
 }
 
 .bold {
@@ -34,8 +32,8 @@
 }
 
 .button {
-    padding: 2% 3%;
-    width: 20%;
+    border-radius: 50%;
+    padding: 5%;
 }
 
 .button:focus {
@@ -127,6 +125,10 @@
 
 .main-section-height {
     height: 100vh;
+}
+
+.max-30 {
+    max-height: 30vh;
 }
 
 .middle {

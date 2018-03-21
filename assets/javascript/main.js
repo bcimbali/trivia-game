@@ -82,10 +82,10 @@ $(document).ready(function() {
 
     // Displays the totals at the end of the game
     function displayTotals() {
-        $('<div>All Done!</div>').appendTo('.js-main-section');
-        $('<div>Correct Answers: ' + answersGuessedCorrect + '</div>').appendTo('.js-main-section');
-        $('<div>Incorrect Answers: ' + answersGuessedIncorrect + '</div>').appendTo('.js-main-section');
-        $('<div>Unanswered: ' + answersUnanswered + '</div>').appendTo('.js-main-section');
+        $('<div class="norm-font purple">All Done!</div>').appendTo('.js-main-section');
+        $('<div class="norm-font purple">Correct Answers: ' + answersGuessedCorrect + '</div>').appendTo('.js-main-section');
+        $('<div class="norm-font purple">Incorrect Answers: ' + answersGuessedIncorrect + '</div>').appendTo('.js-main-section');
+        $('<div class="norm-font purple">Unanswered: ' + answersUnanswered + '</div>').appendTo('.js-main-section');
     }
 
     // Hides the start button

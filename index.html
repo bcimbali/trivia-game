@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="html">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +9,30 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <title>Color Trivia</title>
 </head>
-<body class="body center colorful d-f m-h-100 pad-2-10">
-    <div class="background-white column container cross-axis-center d-f flex-start m-h-100 w-100">
+<body class="body center colorful d-f pad-2-10">
+    <div class="center d-f">
+        <div class="background-white border column cross-axis-center d-f flex-start w-100">
 
-        <div class="center cross-axis-center d-f fluid-header header header-font text-center w-100">
-            <div class="">Color trivia</div>
-        </div>
-
-        <!-- Start game on button click -->
-        <div class="column cross-axis-center d-f js-main-section pad-main-section text-center w-100">
-            <button class="bg-purple border border-white button norm-font js-start pointer purple white-text">Start</button>
-
-            <!-- Timer countdown -->
-            <div class="norm-font js-timer m-b none purple text-medium w-100">
-                Time Remaining: <span class="js-countdown">60 seconds</span>
+            <div class="center cross-axis-center d-f fluid-header header header-font text-center w-100">
+                <div class="">Color trivia</div>
             </div>
 
-            <!-- Questions get rendered here -->
-            <div class="norm-font js-questions"></div>
-            <div class="norm-font js-answers"></div>
-        
-            <!-- Stop the game -->
-            <button class="bg-purple button none js-stop pointer purple white-text">Stop the game</button>
+            <!-- Start game on button click -->
+            <div class="column cross-axis-center d-f js-main-section pad-main-section text-center w-100">
+                <button class="bg-purple border border-white button norm-font js-start pointer purple white-text">Start</button>
+
+                <!-- Timer countdown -->
+                <div class="norm-font js-timer m-b none purple text-medium w-100">
+                    Time Remaining: <span class="js-countdown">60 seconds</span>
+                </div>
+
+                <!-- Questions get rendered here -->
+                <div class="norm-font js-questions purple"></div>
+                <div class="norm-font js-answers purple"></div>
+            
+                <!-- Stop the game -->
+                <button class="bg-purple button none norm-font js-stop pointer purple white-text">Stop the game</button>
+            </div>
         </div>
     </div>
 
