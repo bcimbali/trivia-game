@@ -98,6 +98,10 @@
     font-size: calc(12px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
+.fluid-results {
+    font-size: calc(20px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
 .header {
     color: purple;
     /* font-size: xx-large; */
@@ -185,6 +189,10 @@
 
 .row-wrap {
     flex-flow: row wrap;
+}
+
+.sticky {
+    position: sticky;
 }
 
 .text-center {
