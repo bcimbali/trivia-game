@@ -99,7 +99,7 @@ $(document).ready(function() {
         for (var i = 0; i < questions.length; i++) {
             $('.js-questions').append('<p>' + questions[i].question + '</p>');
                 for (var j = 0; j < questions[i].answer.length; j++) {
-                    $('.js-questions').append('<label class="pointer" for=' + questions[i].answer[j] + i + '><input class="pointer" type="radio" id="' + questions[i].answer[j] + i +  '"value="' + questions[i].answer[j] + '"name="'+ i + '">' + questions[i].answer[j] + '</input></label>' );
+                    $('.js-questions').append('<label class="answerz pointer" for=' + questions[i].answer[j] + i + '><input class="pointer" type="radio" id="' + questions[i].answer[j] + i +  '"value="' + questions[i].answer[j] + '"name="'+ i + '">' + questions[i].answer[j] + '</input></label>' );
                 }
             $('.js-questions').append('<br><hr class="hr">');
         }

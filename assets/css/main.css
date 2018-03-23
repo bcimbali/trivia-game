@@ -8,6 +8,10 @@
     src: url('./../fonts/Digital_Dust.otf') format('opentype');
 }
 
+.answerz:hover {
+    text-decoration: underline;
+}
+
 .background-white {
     background-color: rgba(255, 255, 255, 0.8);
 }
