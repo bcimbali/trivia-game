@@ -1,7 +1,7 @@
-Psych of Color Trivia Game
+# Psych of Color Trivia Game
 A fun, psychology of color, trivia game.  
 
-# Play the game here:
+## Play the game here:
 
 https://bcimbali.github.io/trivia-game/
 
