@@ -5,6 +5,10 @@ A fun, psychology of color, trivia game.  Players are given 60 seconds to answer
 
 https://bcimbali.github.io/trivia-game/
 
+## Screenshot:
+
+![Trivia Game Screenshot](https://github.com/bcimbali/Responsive-Portfolio/blob/master/assets/images/Trivia_Game_2.PNG?raw=true)
+
 ## Built with
 
 - jQuery
